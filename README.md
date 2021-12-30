@@ -14,8 +14,28 @@ yarn create react-app react-tailwind-css-stater
 yarn add -D tailwindcss postcss autoprefixer
 ```
 
-### Generate tailwind.config.js and postcss.config.js
+### Generate `tailwind.config.js` and `postcss.config.js`
 
 ```sh
 yarn tailwindcss init -p
+```
+
+### Modify `tailwind.config.js` file
+
+```js
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+### Add tailwind base, components and utilities to `index.css`
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ```
